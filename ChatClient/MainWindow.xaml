@@ -1,0 +1,27 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="900" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Window.Background>
+        <ImageBrush>
+            <ImageBrush.ImageSource>
+                <BitmapImage UriSource="C:\Users\Kuzme\source\repos\WCFXUYNIA\images\image.png"/>
+            </ImageBrush.ImageSource>
+        </ImageBrush>
+    </Window.Background>
+
+    <Grid>
+        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" Content="Чат" HorizontalAlignment="Left" Margin="653,33,0,0" VerticalAlignment="Top" Width="229" Height="24" Click="Button_Click"/>
+        <Border BorderBrush="#FF006163" BorderThickness="1" HorizontalAlignment="Left" Height="134" Margin="640,13,0,0" VerticalAlignment="Top" Width="250"/>
+        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" Content="Калькулятор" HorizontalAlignment="Left" Margin="653,69,0,0" VerticalAlignment="Top" Width="229" Height="34" Click="Button_Click_2"/>
+        <Button Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" Content="Выход" HorizontalAlignment="Left" Margin="710,108,0,0" VerticalAlignment="Top" Height="22" Width="114" Click="Button_Click_1"/>
+        <TextBox x:Name="TBUserName" Background="Transparent" HorizontalAlignment="Left" Margin="450,13,0,0" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" Width="168" Height="30" BorderBrush="#FF006163" TextChanged="TBUserName_TextChanged"/>
+        <Button x:Name="BUserName" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" BorderThickness="0" Content="Подтвердить" HorizontalAlignment="Left" Margin="527,48,0,0" VerticalAlignment="Top" Width="91" Height="26" Click="BUserName_Click"/>
+        <ListBox x:Name="ConsoleMain" Background="Transparent" SelectionChanged="Console_SelectionChanged" Margin="653,465,0,0" BorderBrush="#FF006163" Foreground="#FF08FF00"/>
+    </Grid>
+
+</Window>
